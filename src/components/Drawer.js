@@ -15,6 +15,8 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
+import User from "./User";
+import Interactions from "./Interactions";
 
 const drawerWidth = 240;
 
@@ -98,9 +100,9 @@ function MyDrawer() {
           </IconButton>
         </div>
         <Divider />
-        <List onClick={_test}>
+        <List>
           {["Usuarios", "Interaciones", "Publicaciones"].map((text, index) => (
-            <ListItem button key={text}>
+            <ListItem button key={text} onClick={_test}>
               <ListItemIcon >{_renderIcon(index)}</ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
@@ -110,20 +112,8 @@ function MyDrawer() {
       </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        <Typography paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus
-          dolor purus non enim praesent elementum facilisis leo vel. Risus at
-          ultrices mi tempus imperdiet. Semper risus in hendrerit gravida rutrum
-          quisque non tellus.
-        </Typography>
-        <Typography paragraph>
-          Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
-          ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar
-          elementum integer enim neque volutpat ac tincidunt. Ornare suspendisse
-          sed nisi lacus sed viverra tellus. Purus sit amet volutpat consequat
-          mauris. Elementum eu facilisis sed odio morbi.
-        </Typography>
+         <User/>
+         <Interactions/>
       </main>
     </div>
   );

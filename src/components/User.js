@@ -1,9 +1,11 @@
 import React from 'react'
+import Metrics from './Metrics';
 
 const User = () => {
   return(
     <div>
-      <h1>Hola gente</h1>
+    user
+      <Metrics/>
     </div>
   )
 }
