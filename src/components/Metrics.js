@@ -32,8 +32,8 @@ class Metrics extends React.Component {
       <div>
        <div>
        <Chart
-          width={"100%"}
-          height={"200%"}
+          width={"95%"}
+          height={"195%"}
           chartType="PieChart"
           loader={<div>Loading Chart</div>}
           data={[
@@ -56,8 +56,8 @@ class Metrics extends React.Component {
        </div>
         <div>
         <Chart
-          width={"100%"}
-          height={"200%"}
+          width={"95%"}
+          height={"195%"}
           chartType="BarChart"
           loader={<div>Loading Chart</div>}
           data={[

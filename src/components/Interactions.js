@@ -1,9 +1,10 @@
 import React from 'react'
+import Metrics from './Metrics';
 
 const Interactions = () => {
   return(
     <div>
-      <h1>Hola desde interactions</h1>
+      <Metrics/>
     </div>
   )
 }
