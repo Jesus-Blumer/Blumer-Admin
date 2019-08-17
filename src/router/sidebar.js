@@ -6,12 +6,12 @@ export default [
   },
   {
     title: 'Interaciones',
-    url: '/app/iterations',
+    url: '/app/interactions',
     iconMaterials: 'graphic_eq'
   },
   {
     title: 'Publicaciones',
-    url: '/app/pots',
+    url: '/app/posts',
     iconMaterials: 'library_books'
   },
 ]

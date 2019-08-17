@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React, { PureComponent, Children } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import { styles } from "styles/materials";
 
@@ -14,7 +14,6 @@ import MenuIcon from "@material-ui/icons/Menu";
 import Drawer from "@material-ui/core/Drawer";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 
-
 import SideBar from "./SideBar";
 
 class MainAppClass extends PureComponent {
@@ -26,7 +25,7 @@ class MainAppClass extends PureComponent {
 
   render() {
     const { isOpenSideBar } = this.state;
-    const { classes } = this.props;
+    const { classes, children } = this.props;
     console.debug(this.props);
     return (
       <div className={classes.root}>
@@ -55,26 +54,30 @@ class MainAppClass extends PureComponent {
           </Toolbar>
         </AppBar>
         <Drawer
-        variant="permanent"
-        className={clsx(classes.drawer, {
-          [classes.drawerOpen]: isOpenSideBar,
-          [classes.drawerClose]: !isOpenSideBar
-        })}
-        classes={{
-          paper: clsx({
+          variant="permanent"
+          className={clsx(classes.drawer, {
             [classes.drawerOpen]: isOpenSideBar,
             [classes.drawerClose]: !isOpenSideBar
-          })
-        }}
-        open={isOpenSideBar}
-      >
-        <div className={classes.toolbar}>
-          <IconButton onClick={this.toggleIsOpenSideBar}>
+          })}
+          classes={{
+            paper: clsx({
+              [classes.drawerOpen]: isOpenSideBar,
+              [classes.drawerClose]: !isOpenSideBar
+            })
+          }}
+          open={isOpenSideBar}
+        >
+          <div className={classes.toolbar}>
+            <IconButton onClick={this.toggleIsOpenSideBar}>
               <ChevronLeftIcon />
-          </IconButton>
-        </div>
-            <SideBar {...this.props}/>
-      </Drawer>
+            </IconButton>
+          </div>
+          <SideBar {...this.props} />
+        </Drawer>
+        <main className={classes.content}>
+          <div className={classes.toolbar} />
+          {children}
+        </main>
       </div>
     );
   }

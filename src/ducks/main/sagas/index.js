@@ -2,6 +2,7 @@ import { call, put, all, takeLatest } from 'redux-saga/effects';
 import http from 'lib/http';
 import { fetchMarketList } from '../routines';
 
+// TODO url backend
 export function* fetchMarketListSaga() {
   try {
     yield put(fetchMarketList.request());

@@ -19,10 +19,10 @@ export default [
     path: "/app",
     component: MainApp,
     sidebar,
-    router: [
+    routes: [
       { path: "/app/users", component: UserView, exact: true },
-      { path: "/app/Interactions", component: InteractionView, exact: true },
-      { path: "/app/post", component: PostView, exact: true }
+      { path: "/app/interactions", component: InteractionView, exact: true },
+      { path: "/app/posts", component: PostView, exact: true }
     ]
   }
 ];
