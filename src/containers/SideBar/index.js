@@ -1,4 +1,7 @@
 import React from "react";
+
+import { NavLink } from "react-router-dom";
+
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
@@ -11,7 +14,12 @@ const SideBar = props => {
   const renderItemList = (item, idx) => {
     const icon = <i className="material-icons">{item.iconMaterials}</i>;
     return (
-      <ListItem button key={`sidebar-${item.title}-${idx}`}>
+      <ListItem
+        button
+        component={NavLink}
+        to={item.url}
+        key={`sidebar-${item.title}-${idx}`}
+      >
         <ListItemIcon>{icon}</ListItemIcon>
         <ListItemText primary={item.title} />
       </ListItem>

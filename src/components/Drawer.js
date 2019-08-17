@@ -44,7 +44,7 @@ function MyDrawer() {
       case 1:
         return <i className="material-icons">graphic_eq</i>;
       case 2:
-        return <i class="material-icons">library_books</i>;
+        return <i className="material-icons">library_books</i>;
       default:
         return null;
     }
