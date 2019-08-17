@@ -4,35 +4,26 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import Divider from "@material-ui/core/Divider";
 import List from "@material-ui/core/List";
+// TODO. move to router props
+import sidebarConfig from "router/sidebar";
 
-const _test = () => {
-  alert("has dado click");
+const SideBar = props => {
+  const renderItemList = (item, idx) => {
+    const icon = <i className="material-icons">{item.iconMaterials}</i>;
+    return (
+      <ListItem button key={`sidebar-${item.title}-${idx}`}>
+        <ListItemIcon>{icon}</ListItemIcon>
+        <ListItemText primary={item.title} />
+      </ListItem>
+    );
+  };
+  return (
+    <>
+      <Divider />
+      <List>{sidebarConfig.map(renderItemList)}</List>
+      <Divider />
+    </>
+  );
 };
-
-function _renderIcon(index) {
-  switch (index) {
-    case 0:
-      return <i className="material-icons">person</i>;
-    case 1:
-      return <i className="material-icons">graphic_eq</i>;
-    case 2:
-      return <i class="material-icons">library_books</i>;
-    default:
-      return null;
-  }
-}
-
-const SideBar = () => (
-  <Divider>
-    <List>
-      {["Usuarios", "Interaciones", "Publicaciones"].map((text, index) => (
-        <ListItem button key={text} onClick={_test}>
-          <ListItemIcon>{_renderIcon(index)}</ListItemIcon>
-          <ListItemText primary={text} />
-        </ListItem>
-      ))}
-    </List>
-  </Divider>
-);
 
 export default SideBar;
