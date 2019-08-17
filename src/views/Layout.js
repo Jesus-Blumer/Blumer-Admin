@@ -1,5 +1,5 @@
 import React from 'react'
-import MyDrawer from './Drawer';
+import MyDrawer from '../components/Drawer';
 
 class Layout extends React.Component {
   render(){

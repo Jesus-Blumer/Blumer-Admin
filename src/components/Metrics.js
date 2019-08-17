@@ -1,6 +1,8 @@
 import React from "react";
 import { Chart } from "react-google-charts";
 
+// TODO: remote no used components
+// eslint-disable-next-line  no-unused-vars
 const chartEvents = [
   {
     eventName: "select",
@@ -9,6 +11,8 @@ const chartEvents = [
     }
   }
 ];
+// TODO: no-unused-vars
+// eslint-disable-next-line  no-unused-vars
 const data = [
   ["age", "weight"],
   [8, 12],
@@ -19,6 +23,8 @@ const data = [
   [6.5, 7]
 ];
 
+// TODO no-unused-vars
+// eslint-disable-next-line  no-unused-vars
 const options = {
   title: "Age vs. Weight comparison",
   hAxis: { title: "Age", viewWindow: { min: 0, max: 15 } },
