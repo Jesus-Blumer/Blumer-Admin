@@ -15,8 +15,8 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import User from "./User";
-import Interactions from "./Interactions";
+import User from "views/User";
+import Interactions from "views/Interactions";
 
 const drawerWidth = 240;
 
@@ -44,7 +44,7 @@ function MyDrawer() {
       case 1:
         return <i className="material-icons">graphic_eq</i>;
       case 2:
-        return <i class="material-icons">library_books</i>;
+        return <i className="material-icons">library_books</i>;
       default:
         return null;
     }

@@ -1,0 +1,1 @@
+export const GET_MARKET_LIST = 'GET_MARKET_LIST'
